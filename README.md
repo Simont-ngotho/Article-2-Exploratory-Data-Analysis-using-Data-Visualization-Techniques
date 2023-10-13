@@ -1,2 +1,183 @@
-# Article-2-Exploratory-Data-Analysis-using-Data-Visualization-Techniques
-Article 2: Exploratory Data Analysis using Data Visualization Techniques
+# Article 2: Exploratory-Data-Analysis-using-Data-Visualization-Techniques
+
+Exploratory Data Analysis using Data Visualization Techniques
+
+
+# **Preliminaries**
+
+Exploratory Data Analysis (EDA) is very crucial step in data analysis as it helps analysts and data scientists understand the datasets by looking at its structure and characteristics. It involves calculating summary statistics, identifying outliers, visualizing data distributions, exploring relationships between variables and performing hypothesis testing. This helps in uncovering insights that can help business make solid decisions of further data analysis. Data visualization tools helps present complex data in simpler and consumable manner even to no tech-savvy professionals. 
+
+This article explores difference data visualization techniques to help get deeper insights on their application and significance. 
+
+# **Common Data Visualization Techniques for EDA**
+
+
+# **1. Scatter Plots**
+
+They help visualize the relationship between two numerical variables. They key tools for identifying correlations, outliers, clusters or trends. A scatter plot with a regression line can also reveal linear relationships.
+#using matplotlib
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.rand(50) # random data
+y = x + 2 + np.random.randn(50)  # using linear relationship simulation
+
+#Creating scatter plot
+
+plt.scatter(x, y, c='yellow', edgecolor='red', marker='.', label='Points')
+
+#title the scatter plots
+
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.title('Lux Tech Practice Scatter Plot1')
+
+
+#using seaborn
+
+import seaborn as sns
+import numpy as np
+
+x = np.random.rand(50) # random data
+y = x + 2 + np.random.randn(50)  # using linear relationship simulation
+
+#Creating scatter plot
+
+Sns.scatterplot(x, y, color='yellow', edgecolor='red', marker='.', label='Points')
+
+#title the scatter plots
+
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.title('Lux Tech Practice Scatter Plot2')
+
+# **2. Histograms**
+
+Histograms help understand the distribution of numerical data. They display the frequency or count of data points within specified ranges or bins. Histograms helps in checking whether the data is normally distributed or how skewed it is.
+In Python, one can use Matplotlib or Seaborn as shown below;
+
+#Using matplotlib
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = np.random.randn(1000)  # use a Sample data – this random data
+
+
+#Creating histogram
+
+plt.hist(data, bins=15, edgecolor='black', alpha=0.7, color='yellow')
+
+#Title the Histogram
+
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Lux Tech Practice Histogram1')
+
+
+#Using seaborn
+
+import seaborn as sns
+import numpy as np
+
+data = np.random.randn(500) # use a Sample data – this random data
+
+#Creating histogram
+
+sns.histplot (data, bins=15, color='yellow', edgecolor='red')
+
+#Title the Histogram
+
+plt.xlabel ('values')
+plt.ylabel ('frequency')
+plt.title ('Lux Tech Practice Histogram2')
+
+
+# **3. Bar Charts**
+
+They show the frequency or count of different categories for easy identification of the most common/rare values. Stacked bar charts are also used to show the distribution of categories within subgroups.
+import matplotlib.pyplot as plt
+categories = ['Nakuru', 'Kisumu', 'Mombasa', 'Nairobi']
+values = [1.9, 2.4, 3.2, 5.5] # Sample data
+
+#Creating bar chart
+
+plt.bar(categories, values, color='yellow', edgecolor='red')
+
+#titling and labelling 
+
+plt.xlabel('Cities')
+plt.ylabel('Count in Millions')
+plt.title('Lux Tech Practice Bar Chart1')
+
+# **4. Box Plots**
+
+Box plots shows the median, quartiles, and potential outliers and are useful for comparing distributions between different categories or groups within the data.
+
+#Using matplotlib
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = [np.random.normal(0, 1, 50), np.random.normal(2, 1, 50), np.random.normal(4, 1, 50)] # Sample data
+
+#Creating a box plot
+
+plt.boxplot(data, labels=['Category A', 'Category B', 'Category C'])
+
+#Title and label
+
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Lux Tech Practice Box Plot1')
+
+# **5. Time Series Plots**
+
+They are helpful to analysts as they help them understand how data evolves over time, identify trends, seasonality, and anomalies, and make predictions based on historical data.
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+time_period = pd.date_range (start='2000-01-01', periods=30, freq='M')
+data = np.cumsum(np.random.randn(30)) # Generate sample time series data
+
+
+#Creating time series plot
+
+plt.figure(figsize=(14, 7))
+plt.plot(time_period, data, color='yellow', marker='d', linestyle='-')
+
+#labels and title
+
+plt.grid(True)
+plt.xlabel('Time')
+plt.ylabel('Values')
+plt.title('Time Series Plot Example')
+
+# **6. Heatmaps**
+
+Heatmaps help visualize relationships between variables by use of colour intensity to represent the strength and direction of correlations between pairs of variables. This way, they make it easier to identify patterns in large datasets.
+
+#using seaborn
+
+import seaborn as sns
+import numpy as np
+
+data = np.random.rand(10, 5)  # sample data
+
+#Creating a heatmap 
+
+sns.heatmap(data, annot=True, cmap="YlGnBu")
+
+#label and title
+
+plt.xlabel('Variables')
+plt.ylabel('Variables')
+plt.title('Lux Tech Practice Heatmap1’)
+
+
+# **Conclusion**
+
+Data visualization techniques make complex data more interpretable, enabling the identification of patterns, trends, outliers, and data quality issues. It becomes easy for users to interpret regardless of their background and hence helping them make data-driven decisions to solve problems. 
