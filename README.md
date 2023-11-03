@@ -15,6 +15,8 @@ This article explores difference data visualization techniques to help get deepe
 # **1. Scatter Plots**
 
 They help visualize the relationship between two numerical variables. They key tools for identifying correlations, outliers, clusters or trends. A scatter plot with a regression line can also reveal linear relationships.
+
+```python
 #using matplotlib
 
 import matplotlib.pyplot as plt
@@ -52,11 +54,14 @@ plt.xlabel('X-Axis')
 plt.ylabel('Y-Axis')
 plt.title('Lux Tech Practice Scatter Plot2')
 
+```
+
 # **2. Histograms**
 
 Histograms help understand the distribution of numerical data. They display the frequency or count of data points within specified ranges or bins. Histograms helps in checking whether the data is normally distributed or how skewed it is.
 In Python, one can use Matplotlib or Seaborn as shown below;
 
+```python
 #Using matplotlib
 
 import matplotlib.pyplot as plt
@@ -93,10 +98,13 @@ plt.xlabel ('values')
 plt.ylabel ('frequency')
 plt.title ('Lux Tech Practice Histogram2')
 
+```
 
 # **3. Bar Charts**
 
 They show the frequency or count of different categories for easy identification of the most common/rare values. Stacked bar charts are also used to show the distribution of categories within subgroups.
+
+```python
 import matplotlib.pyplot as plt
 categories = ['Nakuru', 'Kisumu', 'Mombasa', 'Nairobi']
 values = [1.9, 2.4, 3.2, 5.5] # Sample data
@@ -111,10 +119,13 @@ plt.xlabel('Cities')
 plt.ylabel('Count in Millions')
 plt.title('Lux Tech Practice Bar Chart1')
 
+```
+
 # **4. Box Plots**
 
 Box plots shows the median, quartiles, and potential outliers and are useful for comparing distributions between different categories or groups within the data.
 
+```python
 #Using matplotlib
 
 import matplotlib.pyplot as plt
@@ -132,10 +143,13 @@ plt.xlabel('Categories')
 plt.ylabel('Values')
 plt.title('Lux Tech Practice Box Plot1')
 
+```
+
 # **5. Time Series Plots**
 
 They are helpful to analysts as they help them understand how data evolves over time, identify trends, seasonality, and anomalies, and make predictions based on historical data.
 
+```
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -156,10 +170,13 @@ plt.xlabel('Time')
 plt.ylabel('Values')
 plt.title('Time Series Plot Example')
 
+```
+
 # **6. Heatmaps**
 
 Heatmaps help visualize relationships between variables by use of colour intensity to represent the strength and direction of correlations between pairs of variables. This way, they make it easier to identify patterns in large datasets.
 
+```python
 #using seaborn
 
 import seaborn as sns
@@ -177,6 +194,7 @@ plt.xlabel('Variables')
 plt.ylabel('Variables')
 plt.title('Lux Tech Practice Heatmap1’)
 
+```
 
 # **Conclusion**
 
