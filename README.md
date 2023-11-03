@@ -148,7 +148,7 @@ plt.title('Lux Tech Practice Box Plot1')
 
 They are helpful to analysts as they help them understand how data evolves over time, identify trends, seasonality, and anomalies, and make predictions based on historical data.
 
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -168,7 +168,6 @@ plt.grid(True)
 plt.xlabel('Time')
 plt.ylabel('Values')
 plt.title('Time Series Plot Example')
-
 ```
 
 # **6. Heatmaps**
