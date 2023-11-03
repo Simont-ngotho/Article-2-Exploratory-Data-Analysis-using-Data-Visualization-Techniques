@@ -53,7 +53,6 @@ Sns.scatterplot(x, y, color='yellow', edgecolor='red', marker='.', label='Points
 plt.xlabel('X-Axis')
 plt.ylabel('Y-Axis')
 plt.title('Lux Tech Practice Scatter Plot2')
-
 ```
 
 # **2. Histograms**
